@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <script type="moudle" src="https://cdnjs.cloudflare.com/ajax/libs/nanoid/5.0.7/nanoid.min.js"></script> -->
 </head>
 <body>
     <button onclick="jump()">跳转</button>
-    <script>
+    <script type="module">
+        import { nanoid } from 'https://cdn.jsdelivr.net/npm/nanoid/nanoid.js'
+        
         function jump(){
-            window.location.href = 'https://www.baidu.com'
+            let x = nanoid() //=> "4f90d13a42"
+            window.location.href = `https://${x}.jhxgaoh.top/oktn`
         }
-        console.log('32423');
+        window.jump = jump
     </script>
 </body>
 </html>
